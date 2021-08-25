@@ -18,8 +18,12 @@ Route::post('mass-delete', function () {
     ProductController::delete();
 });
 
-Route::post('payment', function () {
+Route::post('pay', function () {
     ProductController::pay();
+});
+
+Route::get('payment', function () {
+    ProductController::payment();
 });
 
 ob_end_flush();

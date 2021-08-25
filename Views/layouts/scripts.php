@@ -87,5 +87,15 @@
         $('#delete-product-btn').click(function () {
             $('#products_form').submit();
         })
+
+        // Buy Button
+        $('.buy-btn').click(function (e) {
+            e.preventDefault();
+            let product_id = $(this).attr('product_id');
+            $.post('/pay', {'product_id': product_id})
+                .done(function (data) {
+                    window.location.href = "http://<?= $_SERVER['SERVER_NAME'] ?>/payment";
+                })
+        })
     });
 </script>

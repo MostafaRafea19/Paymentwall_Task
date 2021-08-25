@@ -102,7 +102,11 @@ class ProductController
                 'success_url' => "http://" . $_SERVER['SERVER_NAME']
             )
         );
-        $url = $widget->getUrl();
+        $_SESSION['url'] = $widget->getUrl();
+    }
+
+    public static function payment()
+    {
         $component = 'Views/components/payment.php';
         require_once('Views/layouts/app.php');
     }

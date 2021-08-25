@@ -16,10 +16,7 @@
                         <?= $product['size'] ? '<p class="card-text">' . 'Size: ' . $product['size'] . ' MB' . '</p>' : '' ?>
                         <?= $product['weight'] ? '<p class="card-text">' . 'Weight: ' . $product['weight'] . 'KG' . '</p>' : '' ?>
                         <?= $product['height'] ? '<p class="card-text">' . 'Dimensions: ' . $product['height'] . 'x' . $product['width'] . 'x' . $product['length'] . '</p>' : '' ?>
-                        <form action="/payment" method="post">
-                            <input type="hidden" value="<?= $product['id'] ?>" name="product_id">
-                            <button class="btn btn-info" type="submit">Buy</button>
-                        </form>
+                        <button class="btn btn-info buy-btn" product_id="<?= $product['id'] ?>">Buy</button>
                     </div>
                 </div>
             </div>

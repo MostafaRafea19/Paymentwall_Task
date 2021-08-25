@@ -1,4 +1,6 @@
 <?php
+session_start();
+
 require_once('paymentwall-php/lib/paymentwall.php');
 Paymentwall_Config::getInstance()->set(array(
     'api_type' => Paymentwall_Config::API_GOODS,
